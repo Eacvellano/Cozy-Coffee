@@ -60,11 +60,11 @@ public class PanelIngredientes extends javax.swing.JPanel {
         jLayeredPane.setLayer(ImgCafetera, javax.swing.JLayeredPane.PALETTE_LAYER);
         jLayeredPane.add(ImgCafetera, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 60, -1));
 
-        ImgLeche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Leche60x70.png"))); // NOI18N
+        ImgLeche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Ingredientes/Leche60x70.png"))); // NOI18N
         jLayeredPane.setLayer(ImgLeche, javax.swing.JLayeredPane.PALETTE_LAYER);
         jLayeredPane.add(ImgLeche, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 60, 80));
 
-        ImgChocolate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Chocolate60x60.png"))); // NOI18N
+        ImgChocolate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Ingredientes/Chocolate60x60.png"))); // NOI18N
         jLayeredPane.setLayer(ImgChocolate, javax.swing.JLayeredPane.PALETTE_LAYER);
         jLayeredPane.add(ImgChocolate, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
 
@@ -80,7 +80,7 @@ public class PanelIngredientes extends javax.swing.JPanel {
         jLayeredPane.setLayer(ImgCrema, javax.swing.JLayeredPane.PALETTE_LAYER);
         jLayeredPane.add(ImgCrema, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, 60, 80));
 
-        ImgVainilla.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Vainilla60x60.png"))); // NOI18N
+        ImgVainilla.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Ingredientes/Vainilla60x60.png"))); // NOI18N
         jLayeredPane.setLayer(ImgVainilla, javax.swing.JLayeredPane.PALETTE_LAYER);
         jLayeredPane.add(ImgVainilla, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, 60));
 
