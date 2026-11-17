@@ -50,11 +50,13 @@ public class PanelAcciones extends javax.swing.JPanel {
         btnLimpiar.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnLimpiar.setForeground(new java.awt.Color(102, 59, 64));
         btnLimpiar.setText("LIMPIAR");
+        btnLimpiar.addActionListener(this::btnLimpiarActionPerformed);
 
         btnEntregar.setBackground(new java.awt.Color(216, 208, 197));
         btnEntregar.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnEntregar.setForeground(new java.awt.Color(102, 59, 64));
         btnEntregar.setText("ENTREGAR");
+        btnEntregar.addActionListener(this::btnEntregarActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -84,6 +86,14 @@ public class PanelAcciones extends javax.swing.JPanel {
                 .addContainerGap(45, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        ventana.actualizar();
+    }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void btnEntregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntregarActionPerformed
+        ventana.actualizar();
+    }//GEN-LAST:event_btnEntregarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

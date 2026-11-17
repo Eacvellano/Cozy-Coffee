@@ -15,10 +15,10 @@ public class VistaCafe extends javax.swing.JFrame {
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VistaCafe.class.getName());
 
     private Juego juego;
-    private PanelSuperior PanelSuperior;
-    private PanelCliente PanelCliente;
-    private PanelIngredientes PanelIngredientes;
-    private PanelAcciones PanelAcciones;
+    private PanelSuperior panelSuperior;
+    private PanelCliente panelCliente;
+    private PanelIngredientes panelIngredientes;
+    private PanelAcciones panelAcciones;
     /**
      * Creates new form VistaCafe
      */
@@ -27,10 +27,13 @@ public class VistaCafe extends javax.swing.JFrame {
         initComponents();
         getContentPane().setLayout(new java.awt.BorderLayout());
         
+        panelAcciones = new PanelAcciones(juego, this);
+        
+        add(panelAcciones, java.awt.BorderLayout.SOUTH);
     }
     
     public void actualizar() {
-        PanelAcciones.actualizar();
+        panelAcciones.actualizar();
     }
 
     /**
