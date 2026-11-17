@@ -26,19 +26,66 @@ public class PanelSuperior extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblTitulo = new javax.swing.JLabel();
+        lblDia = new javax.swing.JLabel();
+        lblSaldo = new javax.swing.JLabel();
+        lblAciertos = new javax.swing.JLabel();
+        lblAtendidos = new javax.swing.JLabel();
+
+        setPreferredSize(new java.awt.Dimension(1280, 100));
+
+        lblTitulo.setFont(new java.awt.Font("Trebuchet MS", 1, 22)); // NOI18N
+        lblTitulo.setIcon(new javax.swing.ImageIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Cozy Coffee Cup Logo.png")).getImage().getScaledInstance(210, 70, java.awt.Image.SCALE_SMOOTH)));
+
+        lblDia.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
+        lblDia.setText("Día");
+
+        lblSaldo.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
+        lblSaldo.setText("Saldo");
+
+        lblAciertos.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
+        lblAciertos.setText("Aciertos");
+
+        lblAtendidos.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
+        lblAtendidos.setText("Atendidos");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(lblTitulo)
+                .addGap(161, 161, 161)
+                .addComponent(lblDia)
+                .addGap(194, 194, 194)
+                .addComponent(lblSaldo)
+                .addGap(200, 200, 200)
+                .addComponent(lblAciertos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 322, Short.MAX_VALUE)
+                .addComponent(lblAtendidos)
+                .addGap(180, 180, 180))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblTitulo)
+                    .addComponent(lblDia)
+                    .addComponent(lblSaldo)
+                    .addComponent(lblAciertos)
+                    .addComponent(lblAtendidos))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel lblAciertos;
+    private javax.swing.JLabel lblAtendidos;
+    private javax.swing.JLabel lblDia;
+    private javax.swing.JLabel lblSaldo;
+    private javax.swing.JLabel lblTitulo;
     // End of variables declaration//GEN-END:variables
 }
