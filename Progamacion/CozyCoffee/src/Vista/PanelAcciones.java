@@ -4,7 +4,7 @@
  */
 package Vista;
 
-import Modelo.Juego;
+import Modelo.*;
 import java.util.ArrayList;
 
 /**
@@ -27,7 +27,9 @@ public class PanelAcciones extends javax.swing.JPanel {
     }
     
     public void actualizar(){
-        
+        ArrayList<String> seleccion = juego.getSeleccion();
+        lbVaso.setText(seleccion.isEmpty() ? "Taza vacía" : String.join(", ", seleccion));
+        btnEntregar.setEnabled(!seleccion.isEmpty());
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -46,16 +48,10 @@ public class PanelAcciones extends javax.swing.JPanel {
 
         lbVaso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Vaso100x100.png"))); // NOI18N
 
-        btnLimpiar.setBackground(new java.awt.Color(216, 208, 197));
-        btnLimpiar.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnLimpiar.setForeground(new java.awt.Color(102, 59, 64));
-        btnLimpiar.setText("LIMPIAR");
+        btnLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/boton_limpiar 200x66.png"))); // NOI18N
         btnLimpiar.addActionListener(this::btnLimpiarActionPerformed);
 
-        btnEntregar.setBackground(new java.awt.Color(216, 208, 197));
-        btnEntregar.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        btnEntregar.setForeground(new java.awt.Color(102, 59, 64));
-        btnEntregar.setText("ENTREGAR");
+        btnEntregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/boton_entregar 200x66.png"))); // NOI18N
         btnEntregar.addActionListener(this::btnEntregarActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -63,35 +59,36 @@ public class PanelAcciones extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(105, 105, 105)
+                .addGap(88, 88, 88)
                 .addComponent(lbVaso)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 346, Short.MAX_VALUE)
-                .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(316, 316, 316)
-                .addComponent(btnEntregar, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(296, 296, 296)
+                .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 297, Short.MAX_VALUE)
+                .addComponent(btnEntregar, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(99, 99, 99))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(lbVaso))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnEntregar, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addGap(11, 11, 11)
+                .addComponent(lbVaso)
+                .addContainerGap(9, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnEntregar, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGap(30, 30, 30))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        juego.limpiar();
         ventana.actualizar();
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     private void btnEntregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntregarActionPerformed
+        juego.entregar();
         ventana.actualizar();
     }//GEN-LAST:event_btnEntregarActionPerformed
 
