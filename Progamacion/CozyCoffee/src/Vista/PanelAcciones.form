@@ -61,7 +61,7 @@
     <Component class="javax.swing.JButton" name="btnLimpiar">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Vista/imagenes/boton_limpiar 200x66.png"/>
+          <Image iconType="3" name="/Vista/imagenes/hud/limpiar.png"/>
         </Property>
       </Properties>
       <Events>
@@ -71,7 +71,7 @@
     <Component class="javax.swing.JButton" name="btnEntregar">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Vista/imagenes/boton_entregar 200x66.png"/>
+          <Image iconType="3" name="/Vista/imagenes/hud/entregar.png"/>
         </Property>
       </Properties>
       <Events>

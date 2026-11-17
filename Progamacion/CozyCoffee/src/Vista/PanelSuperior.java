@@ -15,6 +15,23 @@ public class PanelSuperior extends javax.swing.JPanel {
      */
     public PanelSuperior() {
         initComponents();
+        // Mantiene el fondo detrás de los indicadores al ejecutar.
+        setComponentZOrder(lblFondo, getComponentCount() - 1);
+    }
+
+    private Modelo.Juego juego;
+
+    public PanelSuperior(Modelo.Juego juego) {
+        this();
+        this.juego = juego;
+        actualizar();
+    }
+
+    public void actualizar() {
+        lblDia.setText("Día " + juego.getDia());
+        lblSaldo.setText("Saldo $" + juego.getSaldo());
+        lblAciertos.setText("Aciertos " + juego.getAciertos());
+        lblAtendidos.setText("Atendidos " + juego.getAtendidos() + "/5");
     }
 
     /**
@@ -26,15 +43,15 @@ public class PanelSuperior extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblFondo = new javax.swing.JLabel();
+        lblFondo = new javax.swing.JLabel();
         lblTitulo = new javax.swing.JLabel();
         lblDia = new javax.swing.JLabel();
         lblSaldo = new javax.swing.JLabel();
         lblAciertos = new javax.swing.JLabel();
         lblAtendidos = new javax.swing.JLabel();
 
-        lblFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/hud/fondo.png")));
-
+        lblFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/hud/fondo.png")));
+
         setPreferredSize(new java.awt.Dimension(1280, 100));
 
         lblTitulo.setFont(new java.awt.Font("Trebuchet MS", 1, 22)); // NOI18N
@@ -59,7 +76,7 @@ public class PanelSuperior extends javax.swing.JPanel {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lblFondo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(15, 15, 15)
@@ -75,7 +92,7 @@ public class PanelSuperior extends javax.swing.JPanel {
                 .addGap(91, 91, 91))
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lblFondo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -99,7 +116,7 @@ public class PanelSuperior extends javax.swing.JPanel {
     private javax.swing.JLabel lblAtendidos;
     private javax.swing.JLabel lblDia;
     private javax.swing.JLabel lblSaldo;
-    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JLabel lblTitulo;
     private javax.swing.JLabel lblFondo;
     // End of variables declaration//GEN-END:variables
 }
