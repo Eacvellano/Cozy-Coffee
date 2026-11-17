@@ -8,6 +8,6 @@ package Modelo;
  *
  * @author emili
  */
-public class Mejora {
+public abstract class Mejora {
     
 }
