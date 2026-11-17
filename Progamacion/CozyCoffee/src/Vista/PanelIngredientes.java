@@ -38,6 +38,8 @@ public class PanelIngredientes extends javax.swing.JPanel {
         ImgVainilla = new javax.swing.JLabel();
         ImgMatcha = new javax.swing.JLabel();
         ImgCanela = new javax.swing.JLabel();
+        ImgCaramelo = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         jToggleButton1.setText("jToggleButton1");
 
@@ -47,46 +49,56 @@ public class PanelIngredientes extends javax.swing.JPanel {
         jLayeredPane.setPreferredSize(new java.awt.Dimension(280, 500));
         jLayeredPane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        ImgEstanteria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Estanteria 280x500.jpg"))); // NOI18N
+        ImgEstanteria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Ingredientes/Estanteria 280x500.jpg"))); // NOI18N
         ImgEstanteria.setText("jLabel1");
         ImgEstanteria.setPreferredSize(new java.awt.Dimension(280, 500));
         jLayeredPane.add(ImgEstanteria, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        ImgCafetera.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Cafetera60x60.png"))); // NOI18N
+        ImgCafetera.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Ingredientes/Cafetera60x60.png"))); // NOI18N
         ImgCafetera.setText("jLabel1");
         ImgCafetera.setPreferredSize(new java.awt.Dimension(60, 60));
         jLayeredPane.setLayer(ImgCafetera, javax.swing.JLayeredPane.PALETTE_LAYER);
         jLayeredPane.add(ImgCafetera, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 60, -1));
 
-        ImgLeche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Leche60x70.png"))); // NOI18N
+        ImgLeche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Ingredientes/Leche60x70.png"))); // NOI18N
         jLayeredPane.setLayer(ImgLeche, javax.swing.JLayeredPane.PALETTE_LAYER);
         jLayeredPane.add(ImgLeche, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 60, 80));
 
-        ImgChocolate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Chocolate60x60.png"))); // NOI18N
+        ImgChocolate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Ingredientes/Chocolate60x60.png"))); // NOI18N
         jLayeredPane.setLayer(ImgChocolate, javax.swing.JLayeredPane.PALETTE_LAYER);
         jLayeredPane.add(ImgChocolate, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
 
-        ImgAgua.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Agua60x70.png"))); // NOI18N
+        ImgAgua.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Ingredientes/Agua60x70.png"))); // NOI18N
         jLayeredPane.setLayer(ImgAgua, javax.swing.JLayeredPane.PALETTE_LAYER);
         jLayeredPane.add(ImgAgua, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 60, 70));
 
-        ImgAzucar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Azucar50x70.png"))); // NOI18N
+        ImgAzucar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Ingredientes/Azucar50x70.png"))); // NOI18N
         jLayeredPane.setLayer(ImgAzucar, javax.swing.JLayeredPane.PALETTE_LAYER);
         jLayeredPane.add(ImgAzucar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 50, 70));
 
-        ImgCrema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Crema50x70.png"))); // NOI18N
+        ImgCrema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Ingredientes/Crema50x70.png"))); // NOI18N
         jLayeredPane.setLayer(ImgCrema, javax.swing.JLayeredPane.PALETTE_LAYER);
         jLayeredPane.add(ImgCrema, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, 60, 80));
 
-        ImgVainilla.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Vainilla60x60.png"))); // NOI18N
+        ImgVainilla.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Ingredientes/Vainilla60x60.png"))); // NOI18N
         jLayeredPane.setLayer(ImgVainilla, javax.swing.JLayeredPane.PALETTE_LAYER);
         jLayeredPane.add(ImgVainilla, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, 60));
-        jLayeredPane.setLayer(ImgMatcha, javax.swing.JLayeredPane.PALETTE_LAYER);
-        jLayeredPane.add(ImgMatcha, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 70, 70));
 
-        ImgCanela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Canela50x70.png"))); // NOI18N
+        ImgMatcha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Ingredientes/MatchaBloqueado60x60.png"))); // NOI18N
+        jLayeredPane.setLayer(ImgMatcha, javax.swing.JLayeredPane.PALETTE_LAYER);
+        jLayeredPane.add(ImgMatcha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 70, 70));
+
+        ImgCanela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Ingredientes/Canela50x70.png"))); // NOI18N
         jLayeredPane.setLayer(ImgCanela, javax.swing.JLayeredPane.PALETTE_LAYER);
         jLayeredPane.add(ImgCanela, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 380, -1, -1));
+
+        ImgCaramelo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Ingredientes/CarameloBloqueado60x60.png"))); // NOI18N
+        jLayeredPane.setLayer(ImgCaramelo, javax.swing.JLayeredPane.PALETTE_LAYER);
+        jLayeredPane.add(ImgCaramelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 390, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Ingredientes/Mapple60x70.png"))); // NOI18N
+        jLayeredPane.setLayer(jLabel1, javax.swing.JLayeredPane.PALETTE_LAYER);
+        jLayeredPane.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -110,12 +122,14 @@ public class PanelIngredientes extends javax.swing.JPanel {
     private javax.swing.JLabel ImgAzucar;
     private javax.swing.JLabel ImgCafetera;
     private javax.swing.JLabel ImgCanela;
+    private javax.swing.JLabel ImgCaramelo;
     private javax.swing.JLabel ImgChocolate;
     private javax.swing.JLabel ImgCrema;
     private javax.swing.JLabel ImgEstanteria;
     private javax.swing.JLabel ImgLeche;
     private javax.swing.JLabel ImgMatcha;
     private javax.swing.JLabel ImgVainilla;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLayeredPane jLayeredPane;
     private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
