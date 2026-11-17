@@ -34,23 +34,23 @@ public class PanelSuperior extends javax.swing.JPanel {
 
         setPreferredSize(new java.awt.Dimension(1280, 100));
 
-        lblTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/hud/logo.png")));
         lblTitulo.setFont(new java.awt.Font("Trebuchet MS", 1, 22)); // NOI18N
+        lblTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/hud/logo.png"))); // NOI18N
 
-        lblDia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/hud/dia.png")));
+        lblDia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/hud/dia.png"))); // NOI18N
         lblDia.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
         lblDia.setText("Día");
 
-        lblSaldo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/hud/saldo.png")));
+        lblSaldo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/hud/saldo.png"))); // NOI18N
         lblSaldo.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
         lblSaldo.setText("Saldo");
 
-        lblAciertos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/hud/aciertos.png")));
         lblAciertos.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
+        lblAciertos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/hud/aciertos.png"))); // NOI18N
         lblAciertos.setText("Aciertos");
 
-        lblAtendidos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/hud/clientes.png")));
         lblAtendidos.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
+        lblAtendidos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/hud/clientes.png"))); // NOI18N
         lblAtendidos.setText("Atendidos");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -62,25 +62,29 @@ public class PanelSuperior extends javax.swing.JPanel {
                 .addComponent(lblTitulo)
                 .addGap(161, 161, 161)
                 .addComponent(lblDia)
-                .addGap(194, 194, 194)
+                .addGap(175, 175, 175)
                 .addComponent(lblSaldo)
-                .addGap(200, 200, 200)
+                .addGap(164, 164, 164)
                 .addComponent(lblAciertos)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 322, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 160, Short.MAX_VALUE)
                 .addComponent(lblAtendidos)
-                .addGap(180, 180, 180))
+                .addGap(91, 91, 91))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(lblTitulo)
-                    .addComponent(lblDia)
-                    .addComponent(lblSaldo)
-                    .addComponent(lblAciertos)
-                    .addComponent(lblAtendidos))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                            .addComponent(lblDia)
+                            .addComponent(lblSaldo)
+                            .addComponent(lblAciertos)
+                            .addComponent(lblAtendidos)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblTitulo)))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
