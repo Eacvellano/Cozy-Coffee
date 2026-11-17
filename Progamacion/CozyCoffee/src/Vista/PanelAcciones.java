@@ -39,31 +39,56 @@ public class PanelAcciones extends javax.swing.JPanel {
     private void initComponents() {
 
         lbVaso = new javax.swing.JLabel();
+        btnLimpiar = new javax.swing.JButton();
+        btnEntregar = new javax.swing.JButton();
 
         setPreferredSize(new java.awt.Dimension(1280, 120));
 
-        lbVaso.setText("vaso");
+        lbVaso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Vaso100x100.png"))); // NOI18N
+
+        btnLimpiar.setBackground(new java.awt.Color(216, 208, 197));
+        btnLimpiar.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnLimpiar.setForeground(new java.awt.Color(102, 59, 64));
+        btnLimpiar.setText("LIMPIAR");
+
+        btnEntregar.setBackground(new java.awt.Color(216, 208, 197));
+        btnEntregar.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        btnEntregar.setForeground(new java.awt.Color(102, 59, 64));
+        btnEntregar.setText("ENTREGAR");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(105, 105, 105)
                 .addComponent(lbVaso)
-                .addContainerGap(356, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 346, Short.MAX_VALUE)
+                .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(316, 316, 316)
+                .addComponent(btnEntregar, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(99, 99, 99))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(219, Short.MAX_VALUE)
-                .addComponent(lbVaso)
-                .addGap(65, 65, 65))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(lbVaso))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnEntregar, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnEntregar;
+    private javax.swing.JButton btnLimpiar;
     private javax.swing.JLabel lbVaso;
     // End of variables declaration//GEN-END:variables
 }
