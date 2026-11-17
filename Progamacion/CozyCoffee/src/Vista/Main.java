@@ -4,6 +4,9 @@
  */
 package Vista;
 
+import Modelo.Juego;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author emili
@@ -15,6 +18,12 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        SwingUtilities.invokeLater(() -> {
+            Juego juego = new Juego();                
+            VistaCafe ventana = new VistaCafe(juego); 
+            ventana.setLocationRelativeTo(null);
+            ventana.setVisible(true);
+        });
     }
     
 }
