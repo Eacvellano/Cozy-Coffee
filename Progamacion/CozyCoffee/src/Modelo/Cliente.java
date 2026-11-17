@@ -4,6 +4,10 @@
  */
 package Modelo;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 /**
  *
  * @author emili
@@ -63,5 +67,27 @@ public class Cliente {
     }
     
     
-    
+    private static final String[][] CLIENTES = {
+    {"Ana", "/imagenes/clientes/ana.png"},
+    {"Luis", "/imagenes/clientes/luis.png"},
+    {"Marta", "/imagenes/clientes/marta.png"},
+    {"Pablo", "/imagenes/clientes/pablo.png"},
+    {"Sofía", "/imagenes/clientes/sofia.png"}
+};
+private static final Random AZAR = new Random();
+
+public static Cliente crearAleatorio(List<Bebida> catalogo) {
+    List<Bebida> opciones = new ArrayList<>();
+    for (Bebida b : catalogo) {
+        if (b.estaDisponible()) {
+            opciones.add(b);
+        }
+    }
+    if (opciones.isEmpty()) {
+        throw new IllegalArgumentException("No hay bebidas disponibles.");
+    }
+    String[] datos = CLIENTES[AZAR.nextInt(CLIENTES.length)];
+    Bebida pedido = opciones.get(AZAR.nextInt(opciones.size()));
+    return new Cliente(datos[0], datos[1], pedido);
+}
 }
