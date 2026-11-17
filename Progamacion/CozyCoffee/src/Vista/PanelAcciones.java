@@ -28,7 +28,7 @@ public class PanelAcciones extends javax.swing.JPanel {
     
     public void actualizar(){
         ArrayList<String> seleccion = juego.getSeleccion();
-        lbVaso.setText(seleccion.isEmpty() ? "Taza vacía" : String.join(", ", seleccion));
+        lbVaso.setText(seleccion.isEmpty() ? "Vaso vacía" : String.join(", ", seleccion));
         btnEntregar.setEnabled(!seleccion.isEmpty());
     }
     /**
