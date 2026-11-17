@@ -34,18 +34,22 @@ public class PanelSuperior extends javax.swing.JPanel {
 
         setPreferredSize(new java.awt.Dimension(1280, 100));
 
+        lblTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/hud/logo.png")));
         lblTitulo.setFont(new java.awt.Font("Trebuchet MS", 1, 22)); // NOI18N
-        lblTitulo.setIcon(new javax.swing.ImageIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Cozy Coffee Cup Logo.png")).getImage().getScaledInstance(210, 70, java.awt.Image.SCALE_SMOOTH)));
 
+        lblDia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/hud/dia.png")));
         lblDia.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
         lblDia.setText("Día");
 
+        lblSaldo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/hud/saldo.png")));
         lblSaldo.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
         lblSaldo.setText("Saldo");
 
+        lblAciertos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/hud/aciertos.png")));
         lblAciertos.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
         lblAciertos.setText("Aciertos");
 
+        lblAtendidos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/hud/clientes.png")));
         lblAtendidos.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
         lblAtendidos.setText("Atendidos");
 
@@ -54,7 +58,7 @@ public class PanelSuperior extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
+                .addGap(15, 15, 15)
                 .addComponent(lblTitulo)
                 .addGap(161, 161, 161)
                 .addComponent(lblDia)
@@ -69,14 +73,14 @@ public class PanelSuperior extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(lblTitulo)
                     .addComponent(lblDia)
                     .addComponent(lblSaldo)
                     .addComponent(lblAciertos)
                     .addComponent(lblAtendidos))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
