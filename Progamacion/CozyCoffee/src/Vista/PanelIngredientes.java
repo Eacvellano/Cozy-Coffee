@@ -26,54 +26,97 @@ public class PanelIngredientes extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLayeredPane2 = new javax.swing.JLayeredPane();
-        lbEstanteria = new javax.swing.JLabel();
+        jToggleButton1 = new javax.swing.JToggleButton();
+        jLayeredPane = new javax.swing.JLayeredPane();
+        ImgEstanteria = new javax.swing.JLabel();
+        ImgCafetera = new javax.swing.JLabel();
+        ImgLeche = new javax.swing.JLabel();
+        ImgChocolate = new javax.swing.JLabel();
+        ImgAgua = new javax.swing.JLabel();
+        ImgAzucar = new javax.swing.JLabel();
+        ImgCrema = new javax.swing.JLabel();
+        ImgVainilla = new javax.swing.JLabel();
+        ImgMatcha = new javax.swing.JLabel();
+        ImgCanela = new javax.swing.JLabel();
+
+        jToggleButton1.setText("jToggleButton1");
 
         setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         setPreferredSize(new java.awt.Dimension(280, 500));
 
-        jLayeredPane2.setPreferredSize(new java.awt.Dimension(280, 500));
+        jLayeredPane.setPreferredSize(new java.awt.Dimension(280, 500));
+        jLayeredPane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lbEstanteria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Estanteria 280x500.jpg"))); // NOI18N
-        lbEstanteria.setText("jLabel1");
-        lbEstanteria.setPreferredSize(new java.awt.Dimension(280, 500));
+        ImgEstanteria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Estanteria 280x500.jpg"))); // NOI18N
+        ImgEstanteria.setText("jLabel1");
+        ImgEstanteria.setPreferredSize(new java.awt.Dimension(280, 500));
+        jLayeredPane.add(ImgEstanteria, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jLayeredPane2.setLayer(lbEstanteria, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        ImgCafetera.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Cafetera60x60.png"))); // NOI18N
+        ImgCafetera.setText("jLabel1");
+        ImgCafetera.setPreferredSize(new java.awt.Dimension(60, 60));
+        jLayeredPane.setLayer(ImgCafetera, javax.swing.JLayeredPane.PALETTE_LAYER);
+        jLayeredPane.add(ImgCafetera, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 60, -1));
 
-        javax.swing.GroupLayout jLayeredPane2Layout = new javax.swing.GroupLayout(jLayeredPane2);
-        jLayeredPane2.setLayout(jLayeredPane2Layout);
-        jLayeredPane2Layout.setHorizontalGroup(
-            jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                .addComponent(lbEstanteria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jLayeredPane2Layout.setVerticalGroup(
-            jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                .addComponent(lbEstanteria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        ImgLeche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Leche60x70.png"))); // NOI18N
+        jLayeredPane.setLayer(ImgLeche, javax.swing.JLayeredPane.PALETTE_LAYER);
+        jLayeredPane.add(ImgLeche, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 60, 80));
+
+        ImgChocolate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Chocolate60x60.png"))); // NOI18N
+        jLayeredPane.setLayer(ImgChocolate, javax.swing.JLayeredPane.PALETTE_LAYER);
+        jLayeredPane.add(ImgChocolate, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
+
+        ImgAgua.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Agua60x70.png"))); // NOI18N
+        jLayeredPane.setLayer(ImgAgua, javax.swing.JLayeredPane.PALETTE_LAYER);
+        jLayeredPane.add(ImgAgua, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 60, 70));
+
+        ImgAzucar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Azucar50x70.png"))); // NOI18N
+        jLayeredPane.setLayer(ImgAzucar, javax.swing.JLayeredPane.PALETTE_LAYER);
+        jLayeredPane.add(ImgAzucar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 50, 70));
+
+        ImgCrema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Crema50x70.png"))); // NOI18N
+        jLayeredPane.setLayer(ImgCrema, javax.swing.JLayeredPane.PALETTE_LAYER);
+        jLayeredPane.add(ImgCrema, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, 60, 80));
+
+        ImgVainilla.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Vainilla60x60.png"))); // NOI18N
+        jLayeredPane.setLayer(ImgVainilla, javax.swing.JLayeredPane.PALETTE_LAYER);
+        jLayeredPane.add(ImgVainilla, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, 60));
+        jLayeredPane.setLayer(ImgMatcha, javax.swing.JLayeredPane.PALETTE_LAYER);
+        jLayeredPane.add(ImgMatcha, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 70, 70));
+
+        ImgCanela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Canela50x70.png"))); // NOI18N
+        jLayeredPane.setLayer(ImgCanela, javax.swing.JLayeredPane.PALETTE_LAYER);
+        jLayeredPane.add(ImgCanela, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 380, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLayeredPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLayeredPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLayeredPane jLayeredPane2;
-    private javax.swing.JLabel lbEstanteria;
+    private javax.swing.JLabel ImgAgua;
+    private javax.swing.JLabel ImgAzucar;
+    private javax.swing.JLabel ImgCafetera;
+    private javax.swing.JLabel ImgCanela;
+    private javax.swing.JLabel ImgChocolate;
+    private javax.swing.JLabel ImgCrema;
+    private javax.swing.JLabel ImgEstanteria;
+    private javax.swing.JLabel ImgLeche;
+    private javax.swing.JLabel ImgMatcha;
+    private javax.swing.JLabel ImgVainilla;
+    private javax.swing.JLayeredPane jLayeredPane;
+    private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 }
