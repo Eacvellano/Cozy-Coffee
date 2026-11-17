@@ -68,11 +68,11 @@ public class Cliente {
     
     
     private static final String[][] CLIENTES = {
-    {"Avellano", "/imagenes/clientes/ana.png"},
-    {"Filipinas", "/imagenes/clientes/luis.png"},
-    {"AzulCielo", "/imagenes/clientes/marta.png"},
-    {"Juan Rulfo", "/imagenes/clientes/pablo.png"},
-    {"Mildred", "/imagenes/clientes/sofia.png"}
+    {"Avellano", "/Vista/imagenes/Avellano.png"},
+    {"Filipinas", "/Vista/imagenes/Filipinas.png"},
+    {"AzulCielo", "/Vista/imagenes/AzulCielo.png"},
+    {"Juan Rulfo", "/Vista/imagenes/Juan Rulfo.png"},
+    {"Mildred", "/Vista/imagenes/Mildred.png"}
 };
 private static final Random AZAR = new Random();
 
