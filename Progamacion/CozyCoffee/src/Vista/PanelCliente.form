@@ -40,12 +40,12 @@
           <Group type="102" alignment="0" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                      <Component id="lbRetrato" min="-2" pref="200" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
                       <Component id="pnlGlobo" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                      <Component id="lbRetrato" min="-2" pref="200" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="111" max="32767" attributes="0"/>
