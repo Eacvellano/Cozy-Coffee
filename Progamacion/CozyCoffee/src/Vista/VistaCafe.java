@@ -4,7 +4,7 @@
  */
 package Vista;
 
-import Modelo.Juego;
+import Modelo.*;
 
 /**
  *
@@ -27,14 +27,24 @@ public class VistaCafe extends javax.swing.JFrame {
         initComponents();
         getContentPane().setLayout(new java.awt.BorderLayout());
         
+        panelSuperior = new PanelSuperior(juego);
+        panelCliente = new PanelCliente(juego);
+        panelIngredientes = new PanelIngredientes(juego, this);
         panelAcciones = new PanelAcciones(juego, this);
-        
+
+        add(panelSuperior, java.awt.BorderLayout.NORTH);
+        add(panelCliente, java.awt.BorderLayout.CENTER);
+        add(panelIngredientes, java.awt.BorderLayout.WEST);
         add(panelAcciones, java.awt.BorderLayout.SOUTH);
+        
+        public void actualizar() {
+            panelSuperior.actualizar();
+            panelCliente.actualizar();
+            panelAcciones.actualizar();
+        }
     }
     
-    public void actualizar() {
-        panelAcciones.actualizar();
-    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
