@@ -4,18 +4,63 @@
  */
 package Vista;
 
+import Modelo.Cliente;
+import java.awt.Image;
+import java.net.URL;
+import javax.swing.ImageIcon;
+
+
+
 /**
  *
  * @author emili
  */
+
+//cliente actual estatico, con nombre y globo de texto
+//sin cambio de nada, solo cliente
+
 public class PanelCliente extends javax.swing.JPanel {
 
     /**
      * Creates new form PanelCliente
      */
     public PanelCliente() {
-        initComponents();
+     initComponents();
+     
     }
+    public void mostrar(Cliente cliente) {
+    if (cliente == null) {
+        limpiar();
+        return;
+    }
+    lbNombre.setText(cliente.getNombre());
+    lbDialogo.setText("<html><body style='width:280px'>"
+            + cliente.getDialogo() + "</body></html>");
+    lbRetrato.setIcon(cargarImagen(cliente.getImagen()));
+}
+
+public void limpiar() {
+    lbNombre.setText(" ");
+    lbDialogo.setText(" ");
+    lbRetrato.setIcon(null);
+}
+
+private ImageIcon cargarImagen(String ruta) {
+    URL url = PanelCliente.class.getResource(ruta);
+    if (url == null) {
+        return null;
+    }
+    ImageIcon original = new ImageIcon(url);
+    int ow = original.getIconWidth();
+    int oh = original.getIconHeight();
+    if (ow <= 0 || oh <= 0) {
+        return null;
+    }
+    double factor = Math.min(160.0 / ow, 200.0 / oh);
+    Image escalada = original.getImage().getScaledInstance(
+            (int) (ow * factor), (int) (oh * factor), Image.SCALE_SMOOTH);
+    return new ImageIcon(escalada);
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -26,19 +71,80 @@ public class PanelCliente extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lbRetrato = new javax.swing.JLabel();
+        lbNombre = new javax.swing.JLabel();
+        pnlGlobo = new javax.swing.JPanel();
+        lbDialogo = new javax.swing.JLabel();
+
+        setPreferredSize(new java.awt.Dimension(1000, 500));
+
+        lbRetrato.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbRetrato.setText("Enter");
+        lbRetrato.setToolTipText("");
+
+        lbNombre.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbNombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbNombre.setText("Nombre");
+
+        pnlGlobo.setBackground(new java.awt.Color(255, 255, 255));
+        pnlGlobo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 23, 0), 2));
+
+        lbDialogo.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        lbDialogo.setText("Quelo un café");
+
+        javax.swing.GroupLayout pnlGloboLayout = new javax.swing.GroupLayout(pnlGlobo);
+        pnlGlobo.setLayout(pnlGloboLayout);
+        pnlGloboLayout.setHorizontalGroup(
+            pnlGloboLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlGloboLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(lbDialogo)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+        pnlGloboLayout.setVerticalGroup(
+            pnlGloboLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlGloboLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(lbDialogo)
+                .addContainerGap(49, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(lbNombre)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(98, 98, 98)
+                .addComponent(lbRetrato, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 312, Short.MAX_VALUE)
+                .addComponent(pnlGlobo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(262, 262, 262))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addComponent(lbRetrato, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(157, 157, 157)
+                        .addComponent(pnlGlobo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
+                .addComponent(lbNombre)
+                .addGap(106, 106, 106))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel lbDialogo;
+    private javax.swing.JLabel lbNombre;
+    private javax.swing.JLabel lbRetrato;
+    private javax.swing.JPanel pnlGlobo;
     // End of variables declaration//GEN-END:variables
 }
