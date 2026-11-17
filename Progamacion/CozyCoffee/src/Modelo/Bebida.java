@@ -60,13 +60,14 @@ public class Bebida {
     }
     
     // Es Correcta: Comprueba si los ingredientes seleccionados coinciden con los de la receta, sin importar el orden.
+    // Si no se selecciona ningún ingrediente, imprime error.
     public boolean esCorrecta(ArrayList<String> seleccion){
         try {
-        if (seleccion == null) {
+        if (seleccion == null){
             throw new IllegalArgumentException("La selección no puede ser nula");
         }
 
-        if (ingredientes.size() != seleccion.size()) {
+        if (ingredientes.size() != seleccion.size()){
             return false;
         }
 
