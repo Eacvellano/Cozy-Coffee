@@ -14,38 +14,32 @@ public class VistaCafe extends javax.swing.JFrame {
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VistaCafe.class.getName());
 
     private Juego juego;
-    private PanelSuperior panelSuperior;
-    private PanelCliente panelCliente;
-    private PanelIngredientes panelIngredientes;
-    private PanelAcciones panelAcciones;
+    private java.awt.CardLayout cardLayout;
+    private javax.swing.JPanel contenedor;
+    private PanelJuego panelJuego;
     /**
      * Creates new form VistaCafe
      */
     public VistaCafe(Juego juego) {
         this.juego = juego;
         initComponents();
-        getContentPane().setLayout(new java.awt.BorderLayout());
-
-        panelSuperior = new PanelSuperior(juego);
-        panelCliente = new PanelCliente();
-        panelIngredientes = new PanelIngredientes(juego, this);
-        panelAcciones = new PanelAcciones(juego, this);
-
-        add(panelSuperior, java.awt.BorderLayout.NORTH);
-        add(panelCliente, java.awt.BorderLayout.CENTER);
-        add(panelIngredientes, java.awt.BorderLayout.WEST);
-        add(panelAcciones, java.awt.BorderLayout.SOUTH);
-
+        cardLayout = new java.awt.CardLayout();
+        contenedor = new javax.swing.JPanel(cardLayout);
+        panelJuego = new PanelJuego(juego, this);
+        PanelMenu panelMenu = new PanelMenu();
+        panelMenu.configurarNuevaPartida(() -> cardLayout.show(contenedor, "Juego"));
+        contenedor.add(panelMenu, "Menu");
+        contenedor.add(panelJuego, "Juego");
+        setContentPane(contenedor);
         setTitle("Cozy Coffee");
         pack();
         setLocationRelativeTo(null);
+        cardLayout.show(contenedor, "Menu");
         actualizar();
     }
 
     public void actualizar() {
-        panelSuperior.actualizar();
-        panelCliente.mostrar(juego.getClienteEnPantalla());
-        panelAcciones.actualizar();
+        panelJuego.actualizar();
     }
 
     /**
