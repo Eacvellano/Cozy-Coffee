@@ -9,5 +9,4 @@ package Modelo;
  * @author emili
  */
 public class MejoraPropina {
-    
 }

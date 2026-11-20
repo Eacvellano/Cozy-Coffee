@@ -12,18 +12,18 @@ import java.util.ArrayList;
  */
 public class Bebida {
     // Atributos
-    private String nombre; 
+    private String nombre;
     private double precio;
     private boolean disponible;
     ArrayList<String> ingredientes = new ArrayList<>();
-    
+
     // Constructor
     public Bebida(String nombre, double precio, boolean disponible) {
         this.nombre = nombre;
         this.precio = precio;
         this.disponible = disponible;
     }
-    
+
     // Get
     public String getNombre() {
         return nombre;
@@ -37,7 +37,7 @@ public class Bebida {
     public ArrayList<String> getIngredientes() {
         return ingredientes;
     }
-    
+
     // Set
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -51,14 +51,14 @@ public class Bebida {
     public void setIngredientes(ArrayList<String> ingredientes) {
         this.ingredientes = ingredientes;
     }
-    
+
     // Métodos de la clase
-    
+
     // Agregar ingredientes: Añade un ingrediente a la preparación actual, evitando repeticiones.
     public void agregarIngredientes(String nombre){
         ingredientes.add(nombre);
     }
-    
+
     // Es Correcta: Comprueba si los ingredientes seleccionados coinciden con los de la receta, sin importar el orden.
     // Si no se selecciona ningún ingrediente, imprime error.
     public boolean esCorrecta(ArrayList<String> seleccion){
@@ -72,13 +72,12 @@ public class Bebida {
         }
 
         return ingredientes.containsAll(seleccion);
-
     } catch (IllegalArgumentException e) {
         System.out.println("Error: " + e.getMessage());
         return false;
     }
     }
-    
+
     // Desbloquear: Verifica si un ingredientes esta disponible.
     public void desbloquear(){
         disponible = true;

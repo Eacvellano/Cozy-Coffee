@@ -12,18 +12,16 @@ import javax.swing.SwingUtilities;
  * @author emili
  */
 public class Main {
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
         SwingUtilities.invokeLater(() -> {
-            Juego juego = new Juego();                
-            VistaCafe ventana = new VistaCafe(juego); 
+            Juego juego = new Juego();
+            VistaCafe ventana = new VistaCafe(juego);
             ventana.setLocationRelativeTo(null);
             ventana.setVisible(true);
         });
     }
-    
 }

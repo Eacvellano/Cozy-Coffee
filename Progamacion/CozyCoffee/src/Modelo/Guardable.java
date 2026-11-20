@@ -9,5 +9,4 @@ package Modelo;
  * @author emili
  */
 public interface Guardable {
-    
 }

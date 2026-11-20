@@ -1,9 +1,6 @@
 /*
-
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
-
  */
 
 package Vista;
@@ -12,7 +9,6 @@ import Modelo.Cliente;
 import java.awt.Image;
 import java.net.URL;
 import javax.swing.ImageIcon;
-
 
 /**
  *
@@ -42,20 +38,15 @@ public class PanelCliente extends javax.swing.JPanel {
     lbDialogo.setText("<html><body style='width:280px'>"
             + cliente.getDialogo() + "</body></html>");
     lbRetrato.setIcon(cargarImagen(cliente.getImagen()));
-
 }
-
 
 public void limpiar() {
     lbNombre.setText(" ");
     lbDialogo.setText(" ");
     lbRetrato.setIcon(null);
-
 }
 
-
 private ImageIcon cargarImagen(String ruta) {
-
     URL url = PanelCliente.class.getResource(ruta);
     if (url == null) {
         return null;
@@ -89,7 +80,6 @@ private ImageIcon cargarImagen(String ruta) {
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-
         jLayeredPane1 = new javax.swing.JLayeredPane();
         ImgFondoCliente = new javax.swing.JLabel();
         lbRetrato = new javax.swing.JLabel();
@@ -159,10 +149,6 @@ private ImageIcon cargarImagen(String ruta) {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-
-
-
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ImgFondoCliente;
     private javax.swing.JLayeredPane jLayeredPane1;
@@ -171,6 +157,4 @@ private ImageIcon cargarImagen(String ruta) {
     private javax.swing.JLabel lbRetrato;
     private javax.swing.JPanel pnlGlobo;
     // End of variables declaration//GEN-END:variables
-
 }
-

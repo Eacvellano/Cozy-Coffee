@@ -17,7 +17,6 @@ public class Cliente {
     private String imagen;   // nombre del archivo en recursos, ej. "cliente1.png"
     private Bebida pedido;
 
-    
     //constructor
     public Cliente(String nombre, String imagen, Bebida pedido) {
          if (nombre == null || nombre.isBlank()) {
@@ -34,12 +33,11 @@ public class Cliente {
          this.imagen = imagen;
     }
 
-    
     //sets
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
+
      public void setImagen(String imagen) {
         this.imagen = imagen;
     }
@@ -51,7 +49,7 @@ public class Cliente {
     public String getNombre() {
         return nombre;
     }
-    
+
      public String getImagen() {
         return imagen;
     }
@@ -59,14 +57,12 @@ public class Cliente {
     public Bebida getPedido() {
         return pedido;
     }
-    
-    
+
     // Texto que aparece en el globo de diálogo (RF05)
     public String getDialogo() {
         return "¡Hola! Me gustaría un " + pedido.getNombre() + ", por favor.";
     }
-    
-    
+
     private static final String[][] CLIENTES = {
     {"Avellano", "/Vista/imagenes/Avellano.png"},
     {"Filipinas", "/Vista/imagenes/Filipinas.png"},
