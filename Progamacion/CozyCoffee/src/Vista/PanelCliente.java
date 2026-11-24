@@ -47,10 +47,16 @@ public void limpiar() {
 }
 
 private ImageIcon cargarImagen(String ruta) {
+    
     URL url = PanelCliente.class.getResource(ruta);
     if (url == null) {
+        System.out.println("No se encontro: " + ruta);
         return null;
     }
+    /*URL url = PanelCliente.class.getResource(ruta);
+    if (url == null) {
+        return null;
+    }*/
 
     ImageIcon original = new ImageIcon(url);
     int ow = original.getIconWidth();
@@ -80,6 +86,7 @@ private ImageIcon cargarImagen(String ruta) {
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+
         jLayeredPane1 = new javax.swing.JLayeredPane();
         ImgFondoCliente = new javax.swing.JLabel();
         lbRetrato = new javax.swing.JLabel();
@@ -99,13 +106,13 @@ private ImageIcon cargarImagen(String ruta) {
         lbRetrato.setText("Enter");
         lbRetrato.setToolTipText("");
         jLayeredPane1.setLayer(lbRetrato, javax.swing.JLayeredPane.PALETTE_LAYER);
-        jLayeredPane1.add(lbRetrato, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, 160, 200));
+        jLayeredPane1.add(lbRetrato, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 310, 410));
 
         lbNombre.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lbNombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbNombre.setText("Nombre");
         jLayeredPane1.setLayer(lbNombre, javax.swing.JLayeredPane.PALETTE_LAYER);
-        jLayeredPane1.add(lbNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 280, -1, -1));
+        jLayeredPane1.add(lbNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 310, -1, -1));
 
         pnlGlobo.setBackground(new java.awt.Color(255, 255, 255));
         pnlGlobo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 23, 0), 2));
@@ -145,7 +152,7 @@ private ImageIcon cargarImagen(String ruta) {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -120,9 +120,9 @@ public class Juego implements Guardable {
 
         String[][] clientes = {
             {"Panda", "Friendly Panda Cafe Customer.png"},
-            {"Avellano", "Avellano.jpg"}, {"Azul Cielo", "AzulCielo.jpg"},
-            {"Filipinas", "Filipinas.png"}, {"Juan Rulfo", "Juan Rulfo.jpg"},
-            {"Mildred", "Mildred.jpg"}
+            {"Avellano", "Avellano.png"}, {"Azul Cielo", "AzulCielo.png"},
+            {"Filipinas", "Filipinas.png"}, {"Juan Rulfo", "Juan Rulfo.png"},
+            {"Mildred", "Mildred.png"}
         };
         int indice = azar.nextInt(clientes.length - 1);
         if (indice >= ultimoCliente) indice++;
