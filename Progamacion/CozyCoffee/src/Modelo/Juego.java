@@ -33,7 +33,9 @@ public class Juego implements Guardable {
     private final Random azar = new Random();
     private String estado = "";
     private int ultimoCliente = 0;
-
+    //catalogo de mejoras de la tienda
+    private final ArrayList<Mejora> catalogo = new ArrayList<>(); 
+    
     public Juego() {
         crearBebida("Café", 12, true, "cafe");
         crearBebida("Café con leche", 16, true, "cafe", "leche");
@@ -60,7 +62,7 @@ public class Juego implements Guardable {
         for (Bebida bebida : bebidas) {
             bebida.setDisponible(!bebida.getNombre().equals("Café con caramelo"));
         }
-
+        crearCatalogo();
         reiniciarDia();
         atenderCliente();
     }
@@ -108,6 +110,10 @@ public class Juego implements Guardable {
         receta.add(bases[azar.nextInt(bases.length)]);
         ArrayList<String> opciones = new ArrayList<>(java.util.Arrays.asList(extras));
         opciones.removeAll(receta);
+         // Con la receta de caramelo comprada, el caramelo puede salir en los pedidos.
+         if(bebidaDisponible("Café con caramelo")){
+             opciones.add("caramelo");
+         }
         java.util.Collections.shuffle(opciones, azar);
         receta.addAll(opciones.subList(0, azar.nextInt(4)));
         Bebida pedido = new Bebida(String.join(" + ", receta), 12 + 3 * (receta.size() - 1), true);
@@ -143,6 +149,10 @@ public class Juego implements Guardable {
 
         if (ingrediente.isEmpty() || seleccion.contains(ingrediente)) {
             return;
+        }
+        //el caramelo sigue bloq (RF09)
+        if(ingrediente.equals("caramelo") && !bebidaDisponible("Café con caramelo")){
+           return; 
         }
         seleccion.add(ingrediente);
     }
@@ -240,8 +250,28 @@ public class Juego implements Guardable {
 
     // Funciones del UML pendientes para otra etapa.
     public boolean comprarMejora(Mejora m) {
-        estado = "La tienda aún no está disponible.";
-        return false;
+        if(m == null || !catalogo.contains(m)){
+            estado = "Mejora no válida";
+            return false;
+        }
+        if(!cerrado || dia >= 7 || pausado){
+            estado = "La tienda solo esta disponible al cerrar los dias 1 a 6.";
+            return false;
+        }
+        if(m.estaComprada()){
+            estado = "Esa mejora ya fue comprada.";
+            return false;
+        }
+        if(saldo < m.getPrecio()){
+            estado = "Saldo insuficiente.";
+            return false;
+        }
+        saldo -= m.getPrecio();
+        m.aplicar(this);
+        m.marcaComprada();
+        estado = "Compraste: " + m.getNombre() + ".";
+        //guardar (); y descomentar caudno B terminedaurdar() (RF22)
+        return true;
     }
 
     public void guardar() {
@@ -297,4 +327,20 @@ public class Juego implements Guardable {
         // Devuelve una copia para proteger la selección original.
         return new ArrayList<>(seleccion);
     }
+
+
+private void crearCatalogo() {
+    catalogo.clear(); // al crear una partida nueva también se reinician las compras
+    catalogo.add(new MejoraPropina("Frasco de propinas", 30, 1));
+    catalogo.add(new MejoraPropina("Propina generosa", 60, 2));
+    catalogo.add(new MejoraBebida("Receta de caramelo", 40, "Café con caramelo"));
+}
+public boolean bebidaDisponible(String nombre) {
+    for (Bebida bebida : bebidas) {
+        if (bebida.getNombre().equalsIgnoreCase(nombre)) {
+            return bebida.estaDisponible();
+        }
+    }
+    return false;
+}
 }
