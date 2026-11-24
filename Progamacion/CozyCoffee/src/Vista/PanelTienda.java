@@ -78,138 +78,77 @@ private void comprar(int i) {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        PnlTienda = new javax.swing.JLayeredPane();
+        jPanel1 = new javax.swing.JPanel();
+        PnlTienda1 = new javax.swing.JLayeredPane();
         ImgFondo = new javax.swing.JLabel();
         btnContinuar = new javax.swing.JLabel();
         btnComprarMatcha = new javax.swing.JLabel();
         btnComprarCaramelo = new javax.swing.JLabel();
         btnVolverResumen = new javax.swing.JLabel();
-        lbNombre1 = new javax.swing.JLabel();
-        lbNombre3 = new javax.swing.JLabel();
-        lbEfecto1 = new javax.swing.JLabel();
-        lbEfecto2 = new javax.swing.JLabel();
-        lbEfecto3 = new javax.swing.JLabel();
-        lbPrecio1 = new javax.swing.JLabel();
-        lbPrecio2 = new javax.swing.JLabel();
-        lbPrecio3 = new javax.swing.JLabel();
-        btnComprar1 = new javax.swing.JButton();
-        btnComprar2 = new javax.swing.JButton();
-        btnComprar3 = new javax.swing.JButton();
-        lbTienda = new javax.swing.JLabel();
-        lbSaldo = new javax.swing.JLabel();
-        btnVolver = new javax.swing.JButton();
-        lbNombre2 = new javax.swing.JLabel();
 
-        PnlTienda.setPreferredSize(new java.awt.Dimension(1280, 720));
-        PnlTienda.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PnlTienda1.setPreferredSize(new java.awt.Dimension(1280, 720));
+        PnlTienda1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        ImgFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Tienda/Fondo.png"))); // NOI18N
-        PnlTienda.add(ImgFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        ImgFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Tienda y Pausa/Fondo.png"))); // NOI18N
+        PnlTienda1.add(ImgFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        btnContinuar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Tienda/Continuar_al_Dia.png"))); // NOI18N
-        PnlTienda.setLayer(btnContinuar, javax.swing.JLayeredPane.PALETTE_LAYER);
-        PnlTienda.add(btnContinuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 590, 280, 90));
+        btnContinuar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Tienda y Pausa/Continuar_al_Dia.png"))); // NOI18N
+        PnlTienda1.setLayer(btnContinuar, javax.swing.JLayeredPane.PALETTE_LAYER);
+        PnlTienda1.add(btnContinuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 590, 280, 90));
 
-        btnComprarMatcha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Tienda/Comprar_200x70.png"))); // NOI18N
-        PnlTienda.setLayer(btnComprarMatcha, javax.swing.JLayeredPane.PALETTE_LAYER);
-        PnlTienda.add(btnComprarMatcha, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 460, 200, 60));
+        btnComprarMatcha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Tienda y Pausa/Comprar_200x70.png"))); // NOI18N
+        PnlTienda1.setLayer(btnComprarMatcha, javax.swing.JLayeredPane.PALETTE_LAYER);
+        PnlTienda1.add(btnComprarMatcha, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 460, 200, 60));
 
-        btnComprarCaramelo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Tienda/Comprar_200x70.png"))); // NOI18N
-        PnlTienda.setLayer(btnComprarCaramelo, javax.swing.JLayeredPane.PALETTE_LAYER);
-        PnlTienda.add(btnComprarCaramelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 460, 200, 60));
+        btnComprarCaramelo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Tienda y Pausa/Comprar_200x70.png"))); // NOI18N
+        PnlTienda1.setLayer(btnComprarCaramelo, javax.swing.JLayeredPane.PALETTE_LAYER);
+        PnlTienda1.add(btnComprarCaramelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 460, 200, 60));
 
-        btnVolverResumen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Tienda/Volver_al_Resumen.png"))); // NOI18N
-        PnlTienda.setLayer(btnVolverResumen, javax.swing.JLayeredPane.PALETTE_LAYER);
-        PnlTienda.add(btnVolverResumen, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 590, 250, 90));
+        btnVolverResumen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Tienda y Pausa/Volver_al_Resumen.png"))); // NOI18N
+        PnlTienda1.setLayer(btnVolverResumen, javax.swing.JLayeredPane.PALETTE_LAYER);
+        PnlTienda1.add(btnVolverResumen, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 590, 250, 90));
 
-        lbNombre1.setText("jLabel1");
-        PnlTienda.add(lbNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, -1, -1));
-
-        lbNombre3.setText("jLabel3");
-        PnlTienda.add(lbNombre3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, -1, -1));
-
-        lbEfecto1.setText("jLabel4");
-        PnlTienda.add(lbEfecto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, -1, -1));
-
-        lbEfecto2.setText("jLabel5");
-        PnlTienda.add(lbEfecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, -1, -1));
-
-        lbEfecto3.setText("jLabel6");
-        PnlTienda.add(lbEfecto3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, -1, -1));
-
-        lbPrecio1.setText("jLabel7");
-        PnlTienda.add(lbPrecio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, -1, -1));
-
-        lbPrecio2.setText("jLabel8");
-        PnlTienda.add(lbPrecio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 270, -1, -1));
-
-        lbPrecio3.setText("jLabel9");
-        PnlTienda.add(lbPrecio3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 360, -1, -1));
-
-        btnComprar1.setText("jButton1");
-        PnlTienda.add(btnComprar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 180, -1, -1));
-
-        btnComprar2.setText("jButton2");
-        PnlTienda.add(btnComprar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 260, -1, -1));
-
-        btnComprar3.setText("jButton3");
-        PnlTienda.add(btnComprar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 350, -1, -1));
-
-        lbTienda.setText("TIENDA");
-        PnlTienda.add(lbTienda, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, -1, -1));
-
-        lbSaldo.setText("Saldo: $");
-        PnlTienda.add(lbSaldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 70, -1, -1));
-
-        btnVolver.setText("Volver");
-        btnVolver.addActionListener(this::btnVolverActionPerformed);
-        PnlTienda.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 430, -1, -1));
-
-        lbNombre2.setText("jLabel1");
-        PnlTienda.add(lbNombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, -1, -1));
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(PnlTienda1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(PnlTienda1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(PnlTienda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(PnlTienda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnVolverActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ImgFondo;
-    private javax.swing.JLayeredPane PnlTienda;
-    private javax.swing.JButton btnComprar1;
-    private javax.swing.JButton btnComprar2;
-    private javax.swing.JButton btnComprar3;
+    private javax.swing.JLayeredPane PnlTienda1;
     private javax.swing.JLabel btnComprarCaramelo;
     private javax.swing.JLabel btnComprarMatcha;
     private javax.swing.JLabel btnContinuar;
-    private javax.swing.JButton btnVolver;
     private javax.swing.JLabel btnVolverResumen;
-    private javax.swing.JLabel lbEfecto1;
-    private javax.swing.JLabel lbEfecto2;
-    private javax.swing.JLabel lbEfecto3;
-    private javax.swing.JLabel lbNombre1;
-    private javax.swing.JLabel lbNombre2;
-    private javax.swing.JLabel lbNombre3;
-    private javax.swing.JLabel lbPrecio1;
-    private javax.swing.JLabel lbPrecio2;
-    private javax.swing.JLabel lbPrecio3;
-    private javax.swing.JLabel lbSaldo;
-    private javax.swing.JLabel lbTienda;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
