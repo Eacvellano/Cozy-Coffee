@@ -59,6 +59,11 @@ public class PanelMenu extends javax.swing.JPanel {
         jLayeredPane1.add(btnContinuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 360, -1, -1));
 
         btnComoJugar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/imagenes/Menu/como_jugar.png"))); // NOI18N
+        btnComoJugar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnComoJugarMouseClicked(evt);
+            }
+        });
         jLayeredPane1.setLayer(btnComoJugar, javax.swing.JLayeredPane.PALETTE_LAYER);
         jLayeredPane1.add(btnComoJugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 460, -1, -1));
 
@@ -90,6 +95,26 @@ public class PanelMenu extends javax.swing.JPanel {
     private void btnSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSalirMouseClicked
         System.exit(0);
     }//GEN-LAST:event_btnSalirMouseClicked
+
+    private void btnComoJugarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnComoJugarMouseClicked
+        javax.swing.JOptionPane.showMessageDialog(this,
+    """
+    ☕ ¿CÓMO JUGAR COZY COFFEE?
+
+    ¡Bienvenido a Cozy Coffee!
+
+    1. Observa el pedido del cliente.
+    2. Selecciona los ingredientes necesarios.
+    3. Prepara el café siguiendo la receta.
+    4. Entrega la bebida al cliente.
+    5. Gana monedas por tus pedidos.
+    6. Compra nuevos ingredientes en la tienda.
+
+    ¡Disfruta preparando cafecitos a tu ritmo!
+    """,
+    "",
+    javax.swing.JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_btnComoJugarMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
