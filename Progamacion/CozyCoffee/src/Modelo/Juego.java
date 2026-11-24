@@ -347,4 +347,8 @@ public boolean bebidaDisponible(String nombre) {
     }
     return false;
 }
+
+    public ArrayList<Mejora> getCatalogo() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
