@@ -50,13 +50,8 @@ private ImageIcon cargarImagen(String ruta) {
     
     URL url = PanelCliente.class.getResource(ruta);
     if (url == null) {
-        System.out.println("No se encontro: " + ruta);
         return null;
     }
-    /*URL url = PanelCliente.class.getResource(ruta);
-    if (url == null) {
-        return null;
-    }*/
 
     ImageIcon original = new ImageIcon(url);
     int ow = original.getIconWidth();

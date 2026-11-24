@@ -32,7 +32,7 @@ public class Juego implements Guardable {
     private final ArrayList<Bebida> bebidas = new ArrayList<>();
     private final Random azar = new Random();
     private String estado = "";
-    private int ultimoCliente = 0;
+    private int ultimoCliente = -1;
     //catalogo de mejoras de la tienda
     private final ArrayList<Mejora> catalogo = new ArrayList<>(); 
     
@@ -125,16 +125,20 @@ public class Juego implements Guardable {
         // La imagen se asignará cuando se integren los recursos.
 
         String[][] clientes = {
-            {"Panda", "Friendly Panda Cafe Customer.png"},
-            {"Avellano", "Avellano.png"}, {"Azul Cielo", "AzulCielo.png"},
-            {"Filipinas", "Filipinas.png"}, {"Juan Rulfo", "Juan Rulfo.png"},
-            {"Mildred", "Mildred.png"}
+        {"Avellano", "Avellano.png"},
+        {"Azul Cielo", "AzulCielo.png"},
+        {"Filipinas", "Filipinas.png"},
+        {"Juan Rulfo", "Juan Rulfo.png"},
+        {"Mildred", "Mildred.png"}
         };
-        int indice = azar.nextInt(clientes.length - 1);
-        if (indice >= ultimoCliente) indice++;
+
+        int indice = azar.nextInt(clientes.length);
+        while (indice == ultimoCliente) {
+        indice = azar.nextInt(clientes.length);
+        }
         ultimoCliente = indice;
         clienteEnPantalla = new Cliente(clientes[indice][0],
-                "/Vista/imagenes/" + clientes[indice][1], pedido);
+        "/Vista/imagenes/" + clientes[indice][1], pedido);
 
         seleccion.clear();
         estado = "Pedido: " + pedido.getNombre() + ".";
