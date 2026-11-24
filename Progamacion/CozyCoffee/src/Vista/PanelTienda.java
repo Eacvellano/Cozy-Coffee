@@ -26,48 +26,16 @@ public class PanelTienda extends javax.swing.JPanel {
     /**
      * Creates new form PanelTienda
      */
-    private Modelo.Juego juego;
-private java.util.ArrayList<Modelo.Mejora> mejoras;
+    //private Modelo.Juego juego;
+//private java.util.ArrayList<Modelo.Mejora> mejoras;
 
     public PanelTienda() {
         initComponents();
     }
     //
-public PanelTienda(Modelo.Juego juego, Runnable alVolver) {
-    this();
-    this.juego = juego;
-    btnComprar1.addActionListener(e -> comprar(0));
-    btnComprar2.addActionListener(e -> comprar(1));
-    btnComprar3.addActionListener(e -> comprar(2));
-    btnVolver.addActionListener(e -> alVolver.run());
-    actualizar();
-}
-//
-public void actualizar() {
-    lbSaldo.setText("Saldo: $" + juego.getSaldo());
-    mejoras = juego.getCatalogo(); // se vuelve a pedir porque nuevaPartida() crea mejoras nuevas
-    pintarFila(0, lbNombre1, lbEfecto1, lbPrecio1, btnComprar1);
-    pintarFila(1, lbNombre2, lbEfecto2, lbPrecio2, btnComprar2);
-    pintarFila(2, lbNombre3, lbEfecto3, lbPrecio3, btnComprar3);
-}
+
     //
-private void pintarFila(int i, javax.swing.JLabel nombre, javax.swing.JLabel efecto,
-        javax.swing.JLabel precio, javax.swing.JButton boton) {
-    Modelo.Mejora m = mejoras.get(i);
-    nombre.setText(m.getNombre());
-    efecto.setText(m.getEfecto());
-    precio.setText("$" + m.getPrecio());
-    boton.setText(m.estaComprada() ? "Comprada" : "Comprar");
-    boton.setEnabled(!m.estaComprada());
-}
-//
-private void comprar(int i) {
-    if (!juego.comprarMejora(mejoras.get(i))) {
-        javax.swing.JOptionPane.showMessageDialog(this, juego.getEstado(),
-                "Compra no realizada", javax.swing.JOptionPane.WARNING_MESSAGE);
-    }
-    actualizar();
-}
+
     
     /**
      * This method is called from within the constructor to initialize the form.
