@@ -43,4 +43,7 @@ public abstract class Mejora {
 
     //Abtracto: cada subclase define su efecto.
     public abstract void aplicar(Juego j);
+    
+    //abstracto para que la tienda muestre efecto RF17
+    public abstract String getEfecto();
 }

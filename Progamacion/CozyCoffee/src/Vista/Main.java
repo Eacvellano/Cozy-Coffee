@@ -19,9 +19,18 @@ public class Main {
         // TODO code application logic here
         SwingUtilities.invokeLater(() -> {
             Juego juego = new Juego();
+            //pruebra se puede borrar
+            for (int i = 0; i < 5; i++) {
+                juego.atenderCliente(); juego.agregarIngrediente("cafe"); juego.entregar(); 
+            }
+        juego.cerrarDia();
+            
             VistaCafe ventana = new VistaCafe(juego);
             ventana.setLocationRelativeTo(null);
             ventana.setVisible(true);
+            
+            //prueba, se puede borrar
+            
         });
     }
 }
